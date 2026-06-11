@@ -1,0 +1,29 @@
+h1 {
+	color: rgb(206, 139, 139);
+	text-shadow: 3px 0 10px rgb(172, 172, 172);
+}
+
+h2 {
+    font-family: cursive;
+    color: #638b7f;
+    background: linear-gradient(to right, white , #ffefaf);
+}
+
+h3 {
+    font-family: cursive;
+    color: #0d1117;
+    background: linear-gradient(to right, white , #afffdf);
+}
+
+p {
+    color: #0d1117;
+}
+
+p.info {
+    font-size: normal;
+    background-color: #dfdfdf;
+}
+
+body {
+    background-color: white;
+}
