@@ -2,20 +2,20 @@
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
   for (let n of data.weather) {
-    console.log(n.main);
-    console.log(n.description);
+    console.log("天気: " + n.main);
+    console.log("詳細: " + n.description);
   }
 
   
-    console.log(data.main.temp);
-    console.log(data.main.temp_min);
-    console.log(data.main.temp_max);
+    console.log("現在の気温: " + data.main.temp);
+    console.log("最低気温: " + data.main.temp_min);
+    console.log("最高気温: " + data.main.temp_max);
 
-    console.log(data.wind.speed);
+    console.log("風速: " + data.wind.speed);
 
-    console.log(data.sys.country);
+    console.log("国: " + data.sys.country);
 
-    console.log(data.name);
+    console.log("都市名: " + data.name);
 }
 
 // 課題5-1 の関数 printDom() はここに記述すること
