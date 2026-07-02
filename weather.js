@@ -1,28 +1,54 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
-function print(data) {
-  for (let n of data.weather) {
-    console.log("天気: " + n.main);
-    console.log("詳細: " + n.description);
-  }
+// function print(data) {
+//   for (let n of data.weather) {
+//     console.log("天気: " + n.main);
+//     console.log("詳細: " + n.description);
+//   }
 
   
-    console.log("現在の気温: " + data.main.temp);
-    console.log("最低気温: " + data.main.temp_min);
-    console.log("最高気温: " + data.main.temp_max);
+//     console.log("現在の気温: " + data.main.temp);
+//     console.log("最低気温: " + data.main.temp_min);
+//     console.log("最高気温: " + data.main.temp_max);
 
-    console.log("風速: " + data.wind.speed);
+//     console.log("風速: " + data.wind.speed);
 
-    console.log("国: " + data.sys.country);
+//     console.log("国: " + data.sys.country);
 
-    console.log("都市名: " + data.name);
-}
+//     console.log("都市名: " + data.name);
+// }
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+let div = document.createElement('div');
+let body = document.querySelector('body');
+body.insertAdjacentElement('beforeend', div);
+div.setAttribute('id', 'result');
+// let span = document.querySelector("span#kensu");
+// span.textContent = data.weather.length;
 
+let ul = document.createElement('ul');
+div.insertAdjacentElement('beforeend', ul);
+
+for (let n of data.weather) {
+    let liWeather = document.createElement('li');
+
+    liWeather.textContent = "天気: " + n.description; 
+    ul.insertAdjacentElement('beforeend', liWeather);
+  }
+
+  let liTempMin = document.createElement('li');
+  liTempMin.textContent = "最低気温: " + data.main.temp_min;
+  ul.insertAdjacentElement('beforeend', liTempMin);
+
+  let liTempMax = document.createElement('li');
+  liTempMax.textContent = "最高気温: " + data.main.temp_max;
+  ul.insertAdjacentElement('beforeend', liTempMax);
+
+  let liCity = document.createElement('li');
+  liCity.textContent = "都市名: " + data.name;
+  ul.insertAdjacentElement('beforeend', liCity);
 }
-
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
 
